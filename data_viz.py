@@ -13,7 +13,7 @@ from plotly.subplots import make_subplots
 st.set_page_config(page_title="Strategy Fox", page_icon=":fox_face:", layout="wide")
 reduce_header_height_style = """
     <style>
-        div.block-container {padding-top:0.5rem;}
+        div.block-container {padding-top:3.5rem;}
     </style>
 """
 
@@ -109,12 +109,12 @@ if st.session_state["authentication_status"]:
 
     # Top 10 clients by total invoice
 
-    top_10_df = df_grouped.nlargest(10, 'Total_invoice_amt')
+    top_10_df = df_grouped.nlargest(20, 'Total_invoice_amt')
     print("Top 10 clients")
     print(top_10_df)
 
     fig1 = px.bar(top_10_df, x='Client Name', y='Total_invoice_amt', 
-                title='Top 10 clients by total invoice',
+                title='Top 20 clients by total invoice',
                 text= top_10_df['Total_invoice_amt']/1000,
                 color='Total_invoice_amt')
 
