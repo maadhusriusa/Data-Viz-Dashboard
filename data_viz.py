@@ -30,7 +30,7 @@ with col1:
     sf_logo = Image.open('sf_logo.png')
     st.image(sf_logo, width=450)
 with col6:
-    authenticator.logout('Logout', 'main', key='unique_key')
+    authenticator.logout('Logout', 'main')
 
 name, authentication_status, username = authenticator.login('Login', 'main')
 
