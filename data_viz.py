@@ -10,9 +10,7 @@ import plotly.graph_objects as go
 from PIL import Image
 from plotly.subplots import make_subplots
 
-print("test")
-
-st.set_page_config(page_title="Testing UI", page_icon=":fox_face:", layout="wide")
+st.set_page_config(page_title="Strategy Fox", page_icon=":fox_face:", layout="wide")
 reduce_header_height_style = """
     <style>
         div.block-container {padding-top:0.5rem;}
@@ -29,15 +27,15 @@ authenticator = stauth.Authenticate(
 
 col1, col2, col3, col4, col5, col6 = st.columns([0.4,0.1,0.1,0.1,0.1,0.2])
 with col1:
-    crayon_logo = Image.open('crayon_logo.PNG')
-    st.image(crayon_logo, width=200)
+    sf_logo = Image.open('sf_logo.PNG')
+    st.image(sf_logo, width=450)
 with col6:
     authenticator.logout('Logout', 'main', key='unique_key')
 
 name, authentication_status, username = authenticator.login('Login', 'main')
 
 if st.session_state["authentication_status"]:
-    st.title("Crayon Data: Overview 🎯")
+    st.title("Strategy Fox: Overview 🎯")
     sidebar = st.sidebar
     expand_data = sidebar.expander("Refresh data")
     one_time_data = expand_data.file_uploader(label="Upload recent data", type="xlsx")
