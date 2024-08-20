@@ -1,9 +1,8 @@
-numpy==1.24.4
-pandas==2.0.3
-streamlit==1.24.0
+pandas==2.2.2
+streamlit==1.37.0
 plotly
 plost
-streamlit-authenticator
+streamlit-authenticator==0.2.2
 openpyxl
 matplotlib
 openai
