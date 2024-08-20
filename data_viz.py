@@ -27,7 +27,7 @@ authenticator = stauth.Authenticate(
 
 col1, col2, col3, col4, col5, col6 = st.columns([0.4,0.1,0.1,0.1,0.1,0.2])
 with col1:
-    sf_logo = Image.open('sf_logo.PNG')
+    sf_logo = Image.open('sf_logo.png')
     st.image(sf_logo, width=450)
 with col6:
     authenticator.logout('Logout', 'main', key='unique_key')
