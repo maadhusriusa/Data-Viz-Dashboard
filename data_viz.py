@@ -10,6 +10,8 @@ import plotly.graph_objects as go
 from PIL import Image
 from plotly.subplots import make_subplots
 
+print("test")
+
 st.set_page_config(page_title="Testing UI", page_icon=":fox_face:", layout="wide")
 reduce_header_height_style = """
     <style>
