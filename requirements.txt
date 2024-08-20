@@ -7,3 +7,4 @@ streamlit-authenticator
 openpyxl
 matplotlib
 openai
+setuptools
